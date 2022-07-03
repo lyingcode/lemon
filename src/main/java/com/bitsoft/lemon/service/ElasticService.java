@@ -1,7 +1,7 @@
 package com.bitsoft.lemon.service;
 
-import com.bitsoft.lemon.model.Hotel;
-import com.bitsoft.lemon.model.Product;
+import com.bitsoft.lemon.model.demo.Hotel;
+import com.bitsoft.lemon.model.demo.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;

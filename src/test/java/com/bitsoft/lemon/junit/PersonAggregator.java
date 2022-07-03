@@ -1,7 +1,7 @@
 package com.bitsoft.lemon.junit;
 
-import com.bitsoft.lemon.model.Person;
-import com.bitsoft.lemon.model.Types;
+import com.bitsoft.lemon.model.demo.Person;
+import com.bitsoft.lemon.model.demo.Types;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.aggregator.ArgumentsAggregationException;

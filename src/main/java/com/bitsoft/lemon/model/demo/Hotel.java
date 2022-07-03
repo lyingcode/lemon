@@ -1,4 +1,4 @@
-package com.bitsoft.lemon.model;
+package com.bitsoft.lemon.model.demo;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

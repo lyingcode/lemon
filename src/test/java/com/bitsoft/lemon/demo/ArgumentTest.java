@@ -2,14 +2,12 @@ package com.bitsoft.lemon.demo;
 
 import com.bitsoft.lemon.junit.MyArgumentsProvider;
 import com.bitsoft.lemon.junit.PersonAggregator;
-import com.bitsoft.lemon.model.Person;
-import com.bitsoft.lemon.model.Types;
+import com.bitsoft.lemon.model.demo.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.AggregateWith;
-import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.converter.JavaTimeConversionPattern;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.CsvSource;

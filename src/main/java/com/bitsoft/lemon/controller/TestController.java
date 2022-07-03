@@ -1,6 +1,6 @@
 package com.bitsoft.lemon.controller;
 
-import com.bitsoft.lemon.model.Hotel;
+import com.bitsoft.lemon.model.demo.Hotel;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
