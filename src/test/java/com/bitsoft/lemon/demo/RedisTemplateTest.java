@@ -9,6 +9,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import java.util.Set;
 
@@ -113,4 +115,24 @@ public class RedisTemplateTest extends BaseUnitTest {
         assert unionSet != null;
         assertTrue(unionSet.containsAll(expectSet));
     }
+    @Test
+    public void setUseTest(){
+        SetOperations setOperations = redisTemplate.opsForSet();
+        String userId = "JAMES";
+        String allUserKey = "user:id";
+        boolean isContains = setOperations.isMember(allUserKey,userId);
+        if(!isContains){
+            setOperations.add(allUserKey,userId);
+        }
+        String dateUserKey = "user:id" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        if(!setOperations.isMember(dateUserKey,userId)){
+            setOperations.add(dateUserKey,userId);
+        }
+        setOperations.add(dateUserKey,"GOE");
+        String diffKey = "user:id:diff";
+        Long result = setOperations.differenceAndStore(dateUserKey,allUserKey,diffKey);
+        assertEquals(1,result);
+        assertTrue(setOperations.isMember(diffKey,"GOE"));
+    }
+
 }
