@@ -25,9 +25,11 @@
     <Loggers>
         <Logger name="org.apache.logging.log4j" level="ERROR" additivity="false">
             <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="Console"/>
         </Logger>
         <Logger name="com.bitsoft.lemon" level="INFO" additivity="false">
             <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="Console"/>
         </Logger>
         <Root level="INFO">
             <AppenderRef ref="Console"/>
